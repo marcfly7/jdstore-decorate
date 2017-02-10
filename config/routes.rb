@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'products#index'
+  root 'welcome#index'
   namespace :admin do
     resources :products
   end
@@ -17,4 +17,9 @@ Rails.application.routes.draw do
   end
   resources :cart_items
   resources :orders
+  namespace :account do
+    resources :orders
+  end
+  resources :welcome
+
 end
