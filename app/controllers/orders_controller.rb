@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user! only: [:create]
+  before_action :authenticate_user!, only: [:create]
   def show
     @order = Order.find(params[:id])
     @product_lists = @order.product_lists
