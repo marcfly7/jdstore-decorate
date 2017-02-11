@@ -20,12 +20,38 @@
 @import "font-awesome";
 
 
-/* navbar */
+/* color info
+
+#F44336
+#E91E63
+#9C27B0
+#673AB7
+#3F51B5
+#2196F3
+#03A9F4
+#00BCD4
+#009688
+#4CAF50
+#8BC34A
+#CDDC39
+
+#FFEB3B
+#FFC107
+#FF9800
+#FF5722
+#795548
+
+#7ac049
+
+*/
+
 
 #flipkart-navbar {
-    background-color: #f5f5f5;
-    color: #FF5722;
-    font-family: PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    background-color: #384245;//#263238
+    color: #FF5722;//#FF5722,
+    border-bottom: 3px solid #FF5722;
+    //font-family: tahoma, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
 }
 
 .row1{
@@ -34,6 +60,7 @@
 
 .row2 {
     padding-bottom: 20px;
+    padding-top: 5px;
 }
 
 .flipkart-navbar-input {
@@ -46,8 +73,8 @@
 }
 
 .flipkart-navbar-button {
-    background-color: #FF5722;
-    border: 1px solid #FF5722;
+    background-color: #FF5722;//#FF5722
+    border: 1px solid #FF5722;//#FF5722
     border-radius: 0 2px 2px 0;
     color: #565656;
     padding: 10px 0;
@@ -56,7 +83,7 @@
 }
 
 .cart-button {
-    background-color: #FF5722;
+    background-color: #FF5722;//#FF5722
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .23), inset 1px 1px 0 0 hsla(0, 0%, 100%, .2);
     padding: 10px 0;
     text-align: center;
@@ -65,9 +92,9 @@
     font-weight: 500;
     width: 120px;
     display: inline-block;
-    color: #FFFFFF;//ffffff
+    color: #212121;//ffffff
     text-decoration: none;
-    color: inherit;
+    //color: inherit;
     border: none;
     outline: none;
 }
@@ -103,7 +130,8 @@
     padding: 0 11px;
     line-height: 23px;
     //font-family: 'Roboto', sans-serif;
-    font-family: PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    //font-family: tahoma, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    font-family: verdana, PingFangSC-Medium, Verdana, Geneva, sans-serif;
     letter-spacing: 0;
     //color: inherit;
     color: #212121;
@@ -146,7 +174,7 @@
 
 .links {
     font-size: 14px;
-    color: #212121;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -157,14 +185,15 @@
 // }
 
 .links:hover {
-    color: #212121;
+    color: #FF5722;
     text-decoration: none;
 }
 
 .profile-links {
     font-size: 13px;
     //font-family: 'Roboto', sans-serif;
-    font-family: PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    //font-family: tahoma, PingFangSC-Medium, verdana, Geneva, sans-serif;
+    font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
     border-bottom: 1px solid #e9e9e9;
     box-sizing: border-box;
     display: block;
@@ -179,7 +208,9 @@
 
 .largenav {
     display: none;
+    padding-top: -5px;
 }
+
 
 .smallnav{
     display: block;
@@ -206,7 +237,19 @@
     }
 }
 
+/* navbar */
+.navbar-brand > img {
+    display: inline-block;	//图片和链接文字显示在同一行
+    margin-right: 5px; //图片和链接文字拉开一点距离
+    margin-top: -25px;//不知道为什么
+    //width: 45px; //定制图片宽度
+    height: 45px; //定制图片高度
+}
+.navbar-brand {
+  font-size: 30px;
+  color: #FF5722;
 
+}
 
 
 // 去掉最下面的那个滚圈。
@@ -214,6 +257,14 @@
 body {
   overflow: scroll;
   overflow-x: hidden;
+  //text-align:center;//竟然不是对所有页面起作用
+}
+
+//设定整个网页居中，且最宽为1024
+div.container {
+  margin-left:auto;
+  margin-right:auto;
+  width:1024px;
 }
 
 /*footer
@@ -247,7 +298,8 @@ body {
 }
 .footer {
 	background: #fcfcfc;//EDEFF1
-  font-family: PingFangSC-Medium, Verdana, Geneva, sans-serif;
+  font-family: PingFangSC-Medium, verdana, Geneva, sans-serif;
+  //font-family: PingFangSC-Medium, verdana, Geneva, sans-serif;
 	height: auto;
 	padding-bottom: 30px;
 	position: relative;
@@ -352,8 +404,8 @@ body {
 	color: #EDEFF1;
 }
 .social li:hover {
-	border: 2px solid #424242;//2c3e50
-	background: #424242;//2c3e50
+	border: 2px solid #FF5722;//2c3e50
+	background: #FF5722;//2c3e50
 }
 .social li a i {
 	font-size: 16px;
@@ -361,9 +413,12 @@ body {
 	color: #EDEFF1 !important;
 }
 .footer-bottom {
-	background: #fcfcfc;//e3e3e3
-	border-top: 1px solid #fcfcfc;//dddddd
-	padding-top: 10px;
+  font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+  font-size: 13px;
+	background: #384245;//#e3e3e3,#fcfcfc
+	border-top: 1px solid #384245;//#dddddd, #fcfcfc
+  color: #edeff1;
+	padding-top: 17px;
 	padding-bottom: 10px;
 }
 .footer-bottom p.pull-left {
