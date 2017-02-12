@@ -1,6 +1,6 @@
 <div class="row container">
   <% @products.each do |product| %>
-    <div class="col-xs-6 col-md-3">
+    <div class="col-xs-6 col-md-4">
       <%= link_to product_path(product) do %>
         <% if product.image.present? %>
           <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
@@ -8,7 +8,7 @@
           <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
         <% end %>
       <% end %>
-      <%= product.title %> ￥ <%= product.price %>
+      <%= product.title %> $ <%= product.price %>
     </div>
   <% end %>
 </div>

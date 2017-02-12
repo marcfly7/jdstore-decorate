@@ -3,10 +3,9 @@
 <html>
   <head>
     <title>iKnew - For your health and more active life </title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -14,7 +13,7 @@
       <div class="row">
         <%= render "common/navbar" %>
           <p class="text-center">
-            <li> <%= link_to("Products", admin_products_path) %> </li>
+            <!-- <li> <%#= link_to("Products", admin_products_path) %> </li> -->
           </p>
       </div>
           <%= yield %>
