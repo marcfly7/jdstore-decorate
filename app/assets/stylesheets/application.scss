@@ -317,7 +317,7 @@ div.container {
   background-color: #384245 !important;
 }
 
-.nav>li>a {
+.nav.nav-justified>li>a {
     font-family: verdana, PingFangSC-Medium, Verdana, Geneva, sans-serif;
     background-color: #f8f8f8;
     color: #000;
@@ -729,4 +729,13 @@ div.container {
 
 .login-help{
   font-size: 12px;
+}
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #555555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: #ddd;
+    cursor: default;
 }

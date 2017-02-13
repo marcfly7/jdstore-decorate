@@ -1,26 +1,145 @@
-<div class="row container">
-  <div class="col-md-6">
-    <% if @product.image.present? %>
-      <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
-    <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-    <% end %>
-  </div>
-  <div class="col-md-6">
-    <h2> <%= @product.title %> </h2>
-    <div style="height:100px;">
-      <p>
-        <%= @product.description %>
-      </p>
+
+	<div class="row container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+						<div class="preview-pic tab-content">
+						  <div class="tab-pane active" id="pic-1">
+                <% if @product.image.present? %>
+                  <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+                <% end %>
+              </div>
+						  <div class="tab-pane" id="pic-2">
+                <% if @product.image.present? %>
+                  <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+                <% end %>
+              </div>
+						  <div class="tab-pane" id="pic-3">
+                <% if @product.image.present? %>
+                  <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+                <% end %>
+              </div>
+						  <!-- <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div> -->
+						</div>
+						<ul class="preview-thumbnail nav nav-tabs">
+						  <li class="active"><a data-target="#pic-1" data-toggle="tab">
+                <% if @product.image.present? %>
+                  <%= image_tag(@product.image.medium.url) %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+                <% end %>
+              </a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab">
+                <% if @product.image.present? %>
+                  <%= image_tag(@product.image.medium.url) %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+                <% end %>
+              </a></li>
+						  <li><a data-target="#pic-3" data-toggle="tab">
+                <% if @product.image.present? %>
+                  <%= image_tag(@product.image.medium.url) %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+                <% end %>
+              </a></li>
+						  <!-- <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+						  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li> -->
+						</ul>
+
+					</div>
+					<div class="details col-md-6">
+
+						<h3 class="product-title"><%= @product.title %> </h3>
+            <br>
+						<div class="rating">
+							<div class="stars">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<span class="review-no">41 reviews</span>
+						</div>
+            <br>
+						<p class="product-description"><%= @product.description %></p>
+            <br>
+            <div> Quantity: <%= @product.quantity %> </div>
+						<h4 class="price">Current price: <span> $ <%= @product.price %> </span></h4>
+						<!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p> -->
+            <!-- <div class="section" style="padding-bottom:20px;">
+              <div>
+                <div class="btn-minus">
+                  <span class="glyphicon glyphicon-minus"></span>
+                </div>
+                <input value="1"/>
+                <div class="btn-plus">
+                  <span class="glyphicon glyphicon-plus"></span>
+                </div>
+              </div>
+            </div> -->
+						<div class="action">
+              <% if @product.quantity.present? && @product.quantity > 0 %>
+              <%= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "add-to-cart btn btn-default") %>
+              <!-- <div class="product-item">
+                  <div>
+                    <%#= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "add-to-cart btn btn-default") %>
+                    <%#= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "btn add2cart ") %>
+                  </div>
+              </div> -->
+              <% else %>
+                Sold out, you cannot purchase
+              <% end %>
+              <!-- <div class="round-submit-1">
+                  <div>
+    							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+                  <button class="round-submit-button" type="button"><span class="fa fa-heart"></span></button>
+                </div>
+              </div> -->
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+    <div class="welcome-content-title">
+      Product specification
     </div>
-    <div> 数量 : <%= @product.quantity %> </div>
-    <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-right">
-      <% if @product.quantity.present? && @product.quantity > 0 %>
-        <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
-      <% else %>
-        已销售一空，无法购买
-      <% end %>
-    </div>
-  </div>
-</div>
+    <div class="nocontent"> </div>
+    <div class="nocontent"> </div>
+	</div>
+
+
+
+<!-- <script>
+$(document).ready(function(){
+
+         //-- Click on QUANTITY
+         $(".btn-minus").on("click",function(){
+             var now = $(".section > div > input").val();
+             if ($.isNumeric(now)){
+                 if (parseInt(now) -1 > 0){ now--;}
+                 $(".section > div > input").val(now);
+             }else{
+                 $(".section > div > input").val("1");
+             }
+         })
+         $(".btn-plus").on("click",function(){
+             var now = $(".section > div > input").val();
+             if ($.isNumeric(now)){
+                 $(".section > div > input").val(parseInt(now)+1);
+             }else{
+                 $(".section > div > input").val("1");
+             }
+         })
+     })
+</script> -->
