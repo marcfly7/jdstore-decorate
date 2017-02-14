@@ -338,7 +338,9 @@ div.container {
 
 
 //welcome hot products
-
+.nocontent {
+  padding: 20px;
+}
 .welcome-content-title:after {
     position: absolute;
     content: '';
@@ -348,11 +350,10 @@ div.container {
     top: calc(50% - 14px);
     background: #FF5722;
 }
-.nocontent {
-  padding: 20px;
-}
+
 
 .welcome-content-title {
+  font-family: Tahoma, verdana, "Proxima Nova Light",Arial,sans-serif;
     width: 100%;
     font-size: 23px;
     font-weight: 500;

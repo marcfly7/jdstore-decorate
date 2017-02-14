@@ -219,3 +219,166 @@ div.section > div > input {
   max-width: 18%;
   text-align: center;
 }
+
+
+
+
+// fitbit产品细节
+
+.details-content-title:after {
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 20px;
+    left: 0;
+    top: calc(50% - 14px);
+    background: #FF5722;
+}
+
+
+.details-content-title {
+  font-family: Tahoma, verdana, "Proxima Nova Light",Arial,sans-serif;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    //padding-top: 20px;
+    padding-left: 20px;
+    height: 40px;
+    line-height: 30px;
+    position: relative;
+}
+
+#container .number-one-seller-banner {
+    height: 400px;
+    position: relative;
+    z-index: 1;
+    background: url("https://static0.fitbit.com/simple.b-cssdisabled-jpg.hbaa5d4bf039126208d23bc56b5bb6f04.pack?items=%2Fcontent%2Fassets%2Flarrybird9483%2Fimages%2Fbanners%2Flarrybird9483-banner1-background.jpg") right no-repeat;
+    background-size: auto 100%;
+}
+
+#container .number-one-seller-banner h3 {
+    font-family: verdana, "Proxima Nova Light",Arial,sans-serif;
+    font-size: 40px;
+    line-height: 1.1;
+    color: #FFF;
+    max-width: 550px;
+    position: absolute;
+    right: 100px;
+    top: 140px;
+}
+
+
+
+.li, .div {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+.sticky-nav {
+    background-color: rgba(255,255,255,0.9);
+    position: relative;
+    z-index: 50;
+    padding: 12px 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.feature-title {
+  margin-top: 30px;
+  font-family: verdana;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+#container .number-one-seller-banner {
+    height: 400px;
+    position: relative;
+    z-index: 1;
+    background: url("https://static0.fitbit.com/simple.b-cssdisabled-jpg.hbaa5d4bf039126208d23bc56b5bb6f04.pack?items=%2Fcontent%2Fassets%2Flarrybird9483%2Fimages%2Fbanners%2Flarrybird9483-banner1-background.jpg") right no-repeat;
+    background-size: auto 100%;
+}
+
+
+#container .fitbitapp-banner {
+    height: 550px;
+    position: relative;
+    z-index: 1;
+    background: url("/images/fitbitapp01.png") right no-repeat;
+    background-size: auto 100%;
+}
+
+
+#container .fitbitapp-banner h3 {
+    max-width: 80%;
+    margin-left: 0px;
+}
+
+#container .fitbitapp-banner h3 {
+    color: #ff7522;
+    font-family: "Proxima Nova Light",Arial,sans-serif;
+    font-size: 30px;
+}
+#container .fitbitapp-banner * {
+    box-sizing: border-box;
+}
+/* -------------------------------------- */
+/* rounded  list style                    */
+
+/* list */
+.rounded-list ol > li
+{
+ line-height: 2em;
+}
+
+.rounded-list {
+  font-family: verdana;
+}
+.rounded-list ol
+{
+counter-reset:li; /* Initiate a counter */
+margin-left:0; /* Remove the default left margin */
+padding-left:0; /* Remove the default left padding */
+}
+
+/* item  */
+.rounded-list ol > li
+{
+position:relative; /* Create a positioning context */
+list-style:none; /* Disable the normal item numbering */
+background:#ffffff; /* Item background color */
+margin:0; /* Give each list item a left margin to make room for the numbers */
+padding-left: 13px; /* Add some spacing around the content */
+padding-bottom:0px;
+padding-top:0px;
+}
+
+/* number  */
+.rounded-list ol > li p:before
+{
+content: counter(li);
+counter-increment: li;
+position: absolute;
+left: -1.3em;
+top: 50%;
+color: #fff;
+/* number background */
+background: #ff5722;
+height: 1.8em;
+width: 1.8em;
+margin-top: -1em;
+line-height: 1.5em;
+border: .3em solid #ff5722;
+text-align: center;
+font-weight: bold;
+font-size: 13px;
+border-radius: 2em;
+}
