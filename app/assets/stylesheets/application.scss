@@ -46,16 +46,49 @@
 #7ac049
 
 */
+//
+// #homebanner .home-banner {
+//     background-color: #384245;//#263238
+//     color: #FF5722;//#FF5722,
+//     border-bottom: 3px solid #FF5722;
+//     //font-family: tahoma, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+//     font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+// }
 
+.bannerbg
+{
+  background: #384245;
+  margin-top: -20px;
+  margin-bottom: 0px;
+  z-index: 501;
+}
 
 #flipkart-navbar {
     background-color: #384245;//#263238
     color: #FF5722;//#FF5722,
-    border-bottom: 3px solid #FF5722;
+    border-bottom: 3px solid #ff5722;
     //font-family: tahoma, PingFangSC-Medium, Verdana, Geneva, sans-serif;
     font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+    z-index: 500;
+    padding-bottom: 10px;
 }
 
+
+
+#homebanner001 {
+    background-color: #fafafa;//#263238 #f2f2f2
+    color: #FF5722;//#FF5722,
+    //border-bottom: 0px solid #ff5722;
+    //font-family: tahoma, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+    z-index: 500;
+    padding-bottom: 40px;
+    margin-top: -30px;
+}
+
+#centerlearnmore {
+  text-align: center;
+}
 .row1{
     padding-top: 10px;
 }
@@ -249,6 +282,67 @@
 }
 
 
+//banner
+.container .home-banner {
+  padding-top: 30px;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+    background-color: #384245;
+    background: url("/images/banner-iWatch2-gif-01.gif") right no-repeat;
+    background-size: auto 100%;
+}
+
+.container .home-banner02 {
+  padding-top: 30px;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+    background-color: #384245;
+    background: url("/images/app-watch-banner-06.jpg") right no-repeat;
+    background-size: auto 100%;
+}
+
+
+.inner {
+    height: auto;
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 50px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-family: "Comic Sans MS", cursive, sans-serif !important;
+}
+
+.huge {
+    font-size: 80px;
+    line-height: 1em;
+    margin-bottom: 20px;
+}
+
+.white {
+    color: #000;
+}
+.bold {
+    font-weight: 700;
+}
+.header {
+    width: 100%;
+    height: auto;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.2em;
+}
+
+.colored {
+    color: #ff5722;
+}
+.normal {
+    font-weight: 400;
+    font-size: 30px;
+}
 
 // 去掉最下面的那个滚圈。
 
@@ -364,6 +458,7 @@ div.container {
     line-height: 40px;
     position: relative;
 }
+
 
 
 //Hot product 的产品部分

@@ -1,3 +1,57 @@
+<!-- <div class="bannerbg">
+<div class="row container">
+  <div class="feature-banner home-banner" id="#mobileapp">
+
+  </div>
+
+</div>
+<br>
+<br>
+</div> -->
+
+<div id="homebanner001">
+
+      <div class="row container">
+        <div class="inner">
+        <h1 class="header bold huge white" style="margin-bottom: 0; margin-top: 50px;">Your <span class="colored bold">Watch</span>  Your <span class="colored bold">Life</span>
+        </h1>
+        <h1 class="header normal white">The world's first smartwatch with <span class="colored bigger">Water resistance to 50 meters</span>
+        </h1>
+        </div>
+
+      </div>
+
+    <div class="row container">
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+
+        <div class="feature-banner home-banner02" id="#mobileapp">
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <div class="feature-banner home-banner" id="#mobileapp">
+           <!-- <h3>See the whole picture with the Fitbit app.</h3> -->
+        </div>
+      </div>
+
+
+    </div>
+    <div class="nocontent"> </div>
+    <div class="nocontent"> </div>
+    <div class="row container " id="centerlearnmore">
+    <div class="round-submit-1">
+      <div>
+          <a class="round-submit-button" href="/products/1">
+            Learn More</a>
+      </div>
+    </div>
+    </div>
+    <div class="nocontent"> </div>
+
+</div>
+
+
+<div class="nocontent"> </div>
+
 <div class="container">
 
   <!-- <div class="row">
@@ -13,6 +67,9 @@
     </div>
 
   </div> -->
+  <div class="welcome-content-title">
+    Iconic Products
+  </div>
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -101,11 +158,52 @@
   </div>
   <!-- End Carousel -->
   <div class="nocontent"> </div>
-
+  <div class="nocontent"> </div>
 
 
 </div>
 
+
+
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="loginmodal-container">
+       <h2 class="text-center">Log in</h2>
+       <br>
+       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+         <div class="form-inputs">
+           <%= f.input :email, required: false, autofocus: true %>
+           <%= f.input :password, required: false %>
+           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+         </div>
+         <div class="form-actions">
+           <%= f.button :submit, "Log in" %>
+         </div>
+       <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="loginmodal-container">
+      <h2 class="text-center">Sign up</h2>
+      <br>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+        <div class="form-inputs">
+          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+          <%= f.input :password_confirmation, required: true %>
+        </div>
+        <div class="form-actions">
+            <%= f.button :submit, "Sign up" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
  <!-- Hot product 的产品部分 -->
 <!-- <div class="hotproductbg">
@@ -258,7 +356,11 @@
 
 
 <div class="productbg">
+  <div class="nocontent"> </div>
 <div class="row container">
+  <div class="welcome-content-title">
+    Hot Products
+  </div>
   <% @products.each do |product| %>
 
     <div class="col-xs-6 col-md-4">
