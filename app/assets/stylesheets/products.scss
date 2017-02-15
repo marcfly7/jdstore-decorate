@@ -159,6 +159,13 @@
     -webkit-transform: scale(1);
             transform: scale(1); } }
 
+.productbg
+{
+  background: #f1f1f1;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
 // 实现小图的底线不为空房到application.scss 才可以，如下：应该是优先级的原因
 // .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 //     color: #555555;
@@ -169,6 +176,8 @@
 // }
 
 //实现数量添加
+
+
 
 
 .btn-success {

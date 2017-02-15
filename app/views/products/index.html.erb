@@ -1,3 +1,5 @@
+
+<div class="productbg">
 <div class="row container">
   <% @products.each do |product| %>
 
@@ -8,69 +10,28 @@
           <div class="pi-img-wrapper">
             <!-- <img src="/images/iwatch2-02.png" class="img-responsive" alt="Berry Lace Dress"> -->
             <% if product.image.present? %>
-              <%= image_tag(product.image.thumb.url, class: "img-responsive") %>
+              <%= image_tag(product.image.medium.url, class: "img-responsive") %>
             <% else %>
               <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
             <% end %>
-            <!-- <div>
-              <a href="#" class="btn">View</a>
-            </div> -->
+            <div>
+                <%= link_to("VIEW", product_path(product), class: "btn")%>
+            </div>
           </div>
           <h3><a href="shop-item.html"><%= product.title %> </a></h3>
           <div class="pi-price">$<%= product.price %></div>
-          <a href="javascript:;" class="btn add2cart">Add to cart</a>
-          <div class="sticker sticker-new"></div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
-
-  <% @products.each do |product| %>
-
-    <div class="col-xs-6 col-md-4">
-      <%= link_to product_path(product) do %>
-
-        <div class="product-item">
-          <div class="pi-img-wrapper">
-            <!-- <img src="/images/iwatch2-02.png" class="img-responsive" alt="Berry Lace Dress"> -->
-            <% if product.image.present? %>
-              <%= image_tag(product.image.thumb.url, class: "img-responsive") %>
-            <% else %>
-              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
-            <% end %>
-            <!-- <div>
-              <a href="#" class="btn">View</a>
-            </div> -->
-          </div>
-          <h3><a href="shop-item.html"><%= product.title %> </a></h3>
-          <div class="pi-price">$<%= product.price %></div>
-          <a href="javascript:;" class="btn add2cart">Add to cart</a>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
-
-
-  <% @products.each do |product| %>
-
-    <div class="col-xs-6 col-md-4">
-      <%= link_to product_path(product) do %>
-
-        <div class="product-item">
-          <div class="pi-img-wrapper">
-            <!-- <img src="/images/iwatch2-02.png" class="img-responsive" alt="Berry Lace Dress"> -->
-            <% if product.image.present? %>
-              <%= image_tag(product.image.thumb.url, class: "img-responsive") %>
-            <% else %>
-              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
-            <% end %>
-            <!-- <div>
-              <a href="#" class="btn">View</a>
-            </div> -->
-          </div>
-          <h3><a href="shop-item.html"><%= product.title %> </a></h3>
-          <div class="pi-price">$<%= product.price %></div>
-          <a href="javascript:;" class="btn add2cart">Add to cart</a>
+          <% if product.quantity.present? && product.quantity > 0 %>
+              <%= link_to("add to cart", add_to_cart_product_path(product), :method => :post, :class => "btn add2cart") %>
+              <!-- <div class="product-item">
+                  <div>
+                    <%#= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "add-to-cart btn btn-default") %>
+                    <%#= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "btn add2cart ") %>
+                  </div>
+              </div> -->
+              <% else %>
+                Sold out, you cannot purchase
+              <% end %>
+              <!-- <a href="javascript:;" class="btn add2cart">Add to cart</a> -->
           <div class="sticker sticker-new"></div>
         </div>
       <% end %>
@@ -78,4 +39,9 @@
   <% end %>
 
 
+
+
+</div>
+<br>
+<br>
 </div>
