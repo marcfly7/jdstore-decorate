@@ -1,4 +1,6 @@
-
+require 'carrierwave/storage/abstract'
+require 'carrierwave/storage/file'
+require 'carrierwave/storage/fog'
 
 CarrierWave.configure do |config|
   if Rails.env.production?
@@ -11,7 +13,7 @@ CarrierWave.configure do |config|
       aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],      # 你的 secret key
 
 
-      region:                'us-west-2' # 你的 S3 bucket 的 Region 位置   
+      region:                'us-west-2' # 你的 S3 bucket 的 Region 位置
 
 
     }
