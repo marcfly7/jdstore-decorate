@@ -36,7 +36,7 @@ gem "font-awesome-rails"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'figaro'
-gem 'fog'
+gem 'fog', require: 'fog/aws'
 
 group :production do
   gem "pg"
