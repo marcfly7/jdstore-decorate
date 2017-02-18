@@ -406,3 +406,14 @@ font-weight: bold;
 font-size: 13px;
 border-radius: 2em;
 }
+
+
+//review color
+.reviews-form .btn-primary, .reviews-form .btn-primary:hover {
+  background-color: #ff5722;
+  border-color: #ff5722;
+}
+
+.review-delete .btn-sm {
+  color: #ff5722;
+}

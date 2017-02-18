@@ -226,8 +226,19 @@ By Heart Rate Monitors USA SELLER  on September 15, 2016</p>
 		</div> <!-- / tabs_item -->
 
 		<div class="tabs_item">
-			<h4>Product review</h4>
-			<p>Lorem ipsum dolor tae.</p>
+			<div class="row">
+		  	<div class="col-sm-12 ">
+			    <h4>
+			      <%= @product.reviews.count %> Reviews
+			    </h4>
+			    <hr>
+			    <div >
+			      <%= render @product.reviews%>
+
+			      <%= render "reviews/form"%>
+			    </div>
+			  </div>
+			</div>
 		</div> <!-- / tabs_item -->
 
 	</div> <!-- / tab_content -->
