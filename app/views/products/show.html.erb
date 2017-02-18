@@ -13,15 +13,15 @@
                 <% end %>
               </div>
 						  <div class="tab-pane" id="pic-2">
-                <% if @product.image.present? %>
-                  <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+                <% if @product.image2.present? %>
+                  <%= image_tag(@product.image2.medium.url, class: "thumbnail") %>
                 <% else %>
                   <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
                 <% end %>
               </div>
 						  <div class="tab-pane" id="pic-3">
-                <% if @product.image.present? %>
-                  <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+                <% if @product.image3.present? %>
+                  <%= image_tag(@product.image3.medium.url, class: "thumbnail") %>
                 <% else %>
                   <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
                 <% end %>
@@ -38,15 +38,15 @@
                 <% end %>
               </a></li>
 						  <li><a data-target="#pic-2" data-toggle="tab">
-                <% if @product.image.present? %>
-                  <%= image_tag(@product.image.medium.url) %>
+                <% if @product.image2.present? %>
+                  <%= image_tag(@product.image2.medium.url) %>
                 <% else %>
                   <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
                 <% end %>
               </a></li>
 						  <li><a data-target="#pic-3" data-toggle="tab">
-                <% if @product.image.present? %>
-                  <%= image_tag(@product.image.medium.url) %>
+                <% if @product.image3.present? %>
+                  <%= image_tag(@product.image3.medium.url) %>
                 <% else %>
                   <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
                 <% end %>
@@ -77,18 +77,6 @@
 						<br>
             <div class="in-stock"> In Stock: <%= @product.quantity %> </div>
 
-						<!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p> -->
-            <!-- <div class="section" style="padding-bottom:20px;">
-              <div>
-                <div class="btn-minus">
-                  <span class="glyphicon glyphicon-minus"></span>
-                </div>
-                <input value="1"/>
-                <div class="btn-plus">
-                  <span class="glyphicon glyphicon-plus"></span>
-                </div>
-              </div>
-            </div> -->
 						<br>
 						<br>
 
@@ -145,61 +133,29 @@
 			<h4>Product features</h4>
 			<hr>
 
-			<section id="#fitbit-feature">
+			<section class="desc-feature">
 				<div class="row">
-					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-						<img src="/images/fitbitfeatures.png">
-					</div>
-					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-						<!-- <h3 class="feature-title">Product Features</h3>
-									<hr> -->
-						<br>
-						<br>
-
-						<table border=0 class="rounded-list">
-							<tr>
-								<td>
-									<ol>
-										<li>
-											<p>PurePulse® Heart Rate</p>
-										</li>
-										<li>
-											<p>Multi-Sport Tracking & Connected GPS</p>
-										</li>
-										<li>
-											<p>Call, Text & Calendar Alerts</p>
-										</li>
-										<li>
-											<p>Cardio Fitness Level</p>
-										</li>
-										<li>
-											<p>Guided Breathing Sessions</p>
-										</li>
-										<li>
-											<p>All-Day Activity, Auto Sleep Tracking</p>
-										</li>
-										<li>
-											<p>Reminders to Move, Long Battery Life</p>
-										</li>
-									</ol>
-								</td>
-							</tr>
-						</table>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<% if @product.des_image.present? %>
+							<%= image_tag(@product.des_image.large.url) %>
+						<% end %>
 					</div>
 				</div>
 			</section>
 			<br>
 			<br>
-			<!-- <div class="details-content-title">
-				Mobile Application
 
-			</div> -->
 			<h4>Mobile Application</h4>
 			<hr>
-			<%#= image_tag("/images/fitbitapp01.png", class: "thumbnail") %>
-			<img class="alignleft max_width" alt="tabs_shortcode2" src="/images/fitbitapp01.png">
-			<!-- <section class="feature-banner fitbitapp-banner" id="#mobileapp">
-			</section> -->
+			<section class="desc-feature">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<% if @product.app_image.present? %>
+							<%= image_tag(@product.app_image.large.url) %>
+						<% end %>
+					</div>
+				</div>
+			</section>
 
 		</div> <!-- / tabs_item -->
 

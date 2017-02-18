@@ -28,6 +28,42 @@
     <%= f.input :image, as: :file%>
   </div>
 
+  <% if @product.image2.present? %>
+    <span>目前商品图2</span> <br>
+    <%= image_tag(@product.image2.thumb.url) %>
+  <% end %>
+
+  <div class="group">
+    <%= f.input :image2, as: :file%>
+  </div>
+
+  <% if @product.image2.present? %>
+    <span>目前商品图3</span> <br>
+    <%= image_tag(@product.image3.thumb.url) %>
+  <% end %>
+
+  <div class="group">
+    <%= f.input :image3, as: :file%>
+  </div>
+
+  <% if @product.des_image.present? %>
+    <span>商品描述图</span> <br>
+    <%= image_tag(@product.des_image.thumb.url) %>
+  <% end %>
+
+  <div class="group">
+    <%= f.input :des_image, as: :file%>
+  </div>
+
+  <% if @product.app_image.present? %>
+    <span>商品App图</span> <br>
+    <%= image_tag(@product.app_image.thumb.url) %>
+  <% end %>
+
+  <div class="group">
+    <%= f.input :app_image, as: :file%>
+  </div>
+
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 
 <% end %>
