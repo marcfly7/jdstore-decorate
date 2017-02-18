@@ -72,7 +72,45 @@
     z-index: 500;
     padding-bottom: 10px;
 }
+#flipkart2-navbar {
+    background-color: #EEEEEE;//#263238
+    color: #384245;//#FF5722,
+    height: 50px;
+    //border-bottom: 3px solid #ff5722;
+    //font-family: tahoma, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+    font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
+    z-index: 500;
+    padding-bottom: 0px;
+}
 
+/* navbar */
+.navbar-brand > img {
+    display: inline-block;	//图片和链接文字显示在同一行
+    margin-right: 5px; //图片和链接文字拉开一点距离
+    margin-top: -25px;//不知道为什么
+    //width: 45px; //定制图片宽度
+    height: 45px; //定制图片高度
+}
+
+.navbar-default .navbar-nav>li>a{
+  color: #000;
+}
+//navabar 2
+.navbar-nav>li>a {
+        font-size: 15px;
+        //line-height: 3.428571;
+        font-weight: 400;
+        color: #000;
+      }
+      .navbar-default .navbar-nav>li>a:hover{
+        color: #ff5722;
+        box-shadow: 0px 20px 0px -18px #ff5722;
+      }
+
+      .add{
+        color: #ff5722;
+        box-shadow: 0px 20px 0px -18px #ff5722;
+      }
 
 
 #homebanner001 {
@@ -101,7 +139,7 @@
 .flipkart-navbar-input {
     padding: 11px 16px;
     border-radius: 2px 0 0 2px;
-    border: 0 none;
+    //border: 1px solid #ff5722;
     outline: 0 none;
     font-size: 13px;
     color: #000;
@@ -113,7 +151,7 @@
     border-radius: 0 2px 2px 0;
     color: #565656;
     padding: 10px 0;
-    height: 40px;
+    height: 42px;
     cursor: pointer;
 }
 
@@ -272,14 +310,7 @@
     }
 }
 
-/* navbar */
-.navbar-brand > img {
-    display: inline-block;	//图片和链接文字显示在同一行
-    margin-right: 5px; //图片和链接文字拉开一点距离
-    margin-top: -25px;//不知道为什么
-    //width: 45px; //定制图片宽度
-    height: 45px; //定制图片高度
-}
+
 
 
 //banner
@@ -446,6 +477,8 @@ div.container {
 }
 
 
+
+
 .welcome-content-title {
   font-family: Tahoma, verdana, "Proxima Nova Light",Arial,sans-serif;
     width: 100%;
@@ -463,7 +496,7 @@ div.container {
 
 //Hot product 的产品部分
 .hotproductbg {
-  background: #f1f1f1;
+  background: #fafafa;
 }
 .product-item {
     padding: 15px;
@@ -553,7 +586,7 @@ div.container {
     color: #a8aeb3;
     border: 1px #ededed solid;
     padding: 3px 6px;
-    text-transform: uppercase;
+    //text-transform: uppercase;
 }
         .product-item .add2cart:hover {
             color: #fff;
@@ -835,3 +868,93 @@ div.container {
     border-bottom-color: #ddd;
     cursor: default;
 }
+
+
+
+// product details tab
+
+
+/* Tabs panel */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+
+// color
+
+
+// TAB ~~~~~~~~~~~~~~~ (.)(.)
+.tab {
+	padding-top: 30px;
+	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	width: 100%;
+	margin: 0 auto;
+	font-family: "Comic Sans MS", 'Roboto', sans-serif;
+	line-height: 1.5;
+  //font-size: 20px;
+	//font-weight: bold;
+	color: #384245;
+	-webkit-font-smoothing: antialiased;
+}
+
+.tabs {
+	display: table;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+  padding: 0;
+	width: 100%;
+  font-size: 20px;
+	font-weight: bold;
+
+	li {
+		float: left;
+		line-height: 38px;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+	}
+
+	a {
+		background-color: #fff;
+		border-bottom: 1px solid #fff;
+		color: #888;
+		font-weight: 500;
+		display: block;
+		letter-spacing: 0;
+		outline: none;
+		padding: 0 20px;
+		text-decoration: none;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		border-bottom: 3px solid #ff5722;
+	}
+}
+
+.tabs_item {
+	display: none;
+	padding: 30px 0;
+
+	h4 {
+		font-weight: bold;
+		color: #ff5722;
+    font-size: 20px;
+	}
+
+	// img {
+	// 	width: 200px;
+	// 	float: left;
+	// 	margin-right: 30px;
+	// }
+
+	&:first-child {display: block;}
+}
+
+.current a {
+	color: #fff;
+	background: #ff5722;
+}
+
+// END TAB ~~~~~~~~~~~~~~~ (.)(.)

@@ -59,6 +59,7 @@
 					<div class="details col-md-6">
 
 						<h3 class="product-title"><%= @product.title %> </h3>
+						<h4 class="price">Price: <span> $ <%= @product.price %> </span></h4>
             <br>
 						<div class="rating">
 							<div class="stars">
@@ -73,8 +74,9 @@
             <br>
 						<p class="product-description"><%= @product.description %></p>
             <br>
-            <div> Quantity: <%= @product.quantity %> </div>
-						<h4 class="price">Current price: <span> $ <%= @product.price %> </span></h4>
+						<br>
+            <div class="in-stock"> In Stock: <%= @product.quantity %> </div>
+
 						<!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p> -->
             <!-- <div class="section" style="padding-bottom:20px;">
               <div>
@@ -87,10 +89,19 @@
                 </div>
               </div>
             </div> -->
+						<br>
+						<br>
+
 						<div class="action">
               <% if @product.quantity.present? && @product.quantity > 0 %>
-              <%= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "add-to-cart btn btn-default") %>
-              <!-- <div class="product-item">
+              <%#= link_to("Add to cart", add_to_cart_product_path(@product), :method => :post, :class => "add-to-cart btn btn-default") %>
+							<div class="round-submit-1">
+								<div>
+											<%= link_to("Add to cart", add_to_cart_product_path(@product), :method => :post, :class => "round-submit-button") %>
+
+								</div>
+							</div>
+							<!-- <div class="product-item">
                   <div>
                     <%#= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "add-to-cart btn btn-default") %>
                     <%#= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "btn add2cart ") %>
@@ -113,71 +124,139 @@
 		</div>
 
 
-
 	</div>
 
 
 
 
-  <div class="container" id="container">
-    <!-- <ul class="nav nav-tabs">
-      <li class="active">
-        <a href="#fitbit-feature">Features</a>
-      </li>
-      <li>
-        <a href="#">Mobile App</a>
-      </li>
-    </ul> -->
-    <!-- <section class="feature-banner number-one-seller-banner ">
-	     <h3>Our #1 selling tracker now has more to love.</h3>
-    </section> -->
-    <div class="details-content-title">
-      Product Features
 
-    </div>
-    <hr>
+<div class="row container" id="container">
+	<div class="tab">
 
-        <section id="#fitbit-feature">
-          <div class="row">
-            <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-              <img src="/images/fitbitfeatures.png">
-            </div>
-            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-            <!-- <h3 class="feature-title">Product Features</h3>
-            <hr> -->
-            <br>
-            <br>
+	<ul class="tabs">
+		<li><a href="#"><b>About the product</b></a></li>
+		<li><a href="#"><b>Product Q&A</b></a></li>
+		<li><a href="#"><b>Product Review</b></a></li>
+	</ul> <!-- / tabs -->
 
-            <table border=0 class="rounded-list">
-                <tr>
-                    <td>
-                    <ol>
-                    <li><p>PurePulse® Heart Rate</p></li>
-                    <li><p>Multi-Sport Tracking & Connected GPS</p></li>
-                    <li><p>Call, Text & Calendar Alerts</p></li>
-                    <li><p>Cardio Fitness Level</p></li>
-                    <li><p>Guided Breathing Sessions</p></li>
-                    <li><p>All-Day Activity, Auto Sleep Tracking</p></li>
-                    <li><p>Reminders to Move, Long Battery Life</p></li>
-                    </ol>
-                    </td>
-                </tr>
-            </table>
-            </div>
-            </div>
-        </section>
-        <br>
-        <br>
-        <div class="details-content-title">
-          Mobile Application
+	<div class="tab_content">
 
-        </div>
-        <hr>
+		<div class="tabs_item">
+			<h4>Product features</h4>
+			<hr>
 
-        <section class="feature-banner fitbitapp-banner" id="#mobileapp">
-    	     <!-- <h3>See the whole picture with the Fitbit app.</h3> -->
-        </section>
+			<section id="#fitbit-feature">
+				<div class="row">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						<img src="/images/fitbitfeatures.png">
+					</div>
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<!-- <h3 class="feature-title">Product Features</h3>
+									<hr> -->
+						<br>
+						<br>
 
-  </div>
- <br>
- <br>
+						<table border=0 class="rounded-list">
+							<tr>
+								<td>
+									<ol>
+										<li>
+											<p>PurePulse® Heart Rate</p>
+										</li>
+										<li>
+											<p>Multi-Sport Tracking & Connected GPS</p>
+										</li>
+										<li>
+											<p>Call, Text & Calendar Alerts</p>
+										</li>
+										<li>
+											<p>Cardio Fitness Level</p>
+										</li>
+										<li>
+											<p>Guided Breathing Sessions</p>
+										</li>
+										<li>
+											<p>All-Day Activity, Auto Sleep Tracking</p>
+										</li>
+										<li>
+											<p>Reminders to Move, Long Battery Life</p>
+										</li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</section>
+			<br>
+			<br>
+			<!-- <div class="details-content-title">
+				Mobile Application
+
+			</div> -->
+			<h4>Mobile Application</h4>
+			<hr>
+			<%#= image_tag("/images/fitbitapp01.png", class: "thumbnail") %>
+			<img class="alignleft max_width" alt="tabs_shortcode2" src="/images/fitbitapp01.png">
+			<!-- <section class="feature-banner fitbitapp-banner" id="#mobileapp">
+			</section> -->
+
+		</div> <!-- / tabs_item -->
+
+		<div class="tabs_item">
+			<h4>Question:</h4> Will it display the time without tapping it. I want a watch that will always tell me time just with a glance.
+      <h4>Answer:</h4> Time will display when you turn your wrist to face up
+			<br>
+			<br>
+
+			<h4>Question:</h4> Is the heart rate monitor accurate when doing various exercises? (running vs hitt vs dance)
+      <h4>Answer:</h4> Measuring HR at the wrist using light, instead of electrical impulses at the chest, is always going to be succeptible of inaccuracy. It's not necessarily the Fitbit, it's the method. At elevated rates there is going to be more attenuation by the time the blood gets to the capillaries in your wrist
+			<br>
+			<br>
+			<h4>Question:</h4> I want to buy the small HR2 but a bit worried that it might look bulky on a slender ladies wrist. Ladies what is your experience?
+      <h4>Answer:</h4> I don't find it to be too large for my wrist. I purchased a lightweight metal band for it, and it looks like a nice watch/bracelet. I often forget I have it on, so it doesn't feel too large.
+			<br>
+			<br>
+			<h4>Question:</h4> How do I determine what size to order?
+      <h4>Answer: </h4><p>Small fits wrists 5.5" - 6.7" in circumference
+Large fits wrists 6.7" - 8.1" in circumference
+XL fits wrists 8.1" - 9.3" in circumference
+By Heart Rate Monitors USA SELLER  on September 15, 2016</p>
+	<br>
+		</div> <!-- / tabs_item -->
+
+		<div class="tabs_item">
+			<h4>Product review</h4>
+			<p>Lorem ipsum dolor tae.</p>
+		</div> <!-- / tabs_item -->
+
+	</div> <!-- / tab_content -->
+</div> <!-- / tab -->
+</div>
+
+
+
+
+ <script>
+
+ $(document).ready(function() {
+
+	(function ($) {
+		$('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
+
+		$('.tab ul.tabs li a').click(function (g) {
+			var tab = $(this).closest('.tab'),
+				index = $(this).closest('li').index();
+
+			tab.find('ul.tabs > li').removeClass('current');
+			$(this).closest('li').addClass('current');
+
+			tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
+			tab.find('.tab_content').find('div.tabs_item:eq(' + index + ')').slideDown();
+
+			g.preventDefault();
+		} );
+	})(jQuery);
+
+});
+</script>
