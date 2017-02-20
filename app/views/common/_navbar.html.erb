@@ -5,14 +5,17 @@
         <div class="row row1">
             <ul class="largenav pull-right">
                 <li class="upper-links"><%= link_to("Home", "/", class: 'links') %></li>
-                <li class="upper-links dropdown"><%= link_to("Products", products_path, class: 'links') %></li>
-                <ul class="dropdown-menu">
-                  <% Category.all.each do |category| %>
+                <li class="upper-links"><%= link_to("Products", products_path, class: 'links') %>
+                  <!-- <li class="upper-links dropdown"><%= link_to("Products", products_path, class: 'links') %> -->
+
+                <!-- <ul class="dropdown-menu">
+                  <%# Category.all.each do |category| %>
                   <li class="profile-li">
-                    <%= link_to category.name, products_path(category: category.name), class: "profile-links"%>
+                    <%#= link_to(category.name, products_path(category: category.name), class: "profile-links")%>
                   </li>
-                  <% end %>
-                </ul>
+                  <%# end %>
+                </ul> -->
+                </li>
                 <!-- <li class="upper-links"><%= link_to("Accessory", "/", class: 'links') %></li> -->
 
                 <% if !current_user %>
