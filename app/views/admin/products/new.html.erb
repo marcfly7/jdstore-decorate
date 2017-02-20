@@ -9,7 +9,12 @@
     <div class="group">
         <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Category") %>
     </div>
-
+    <div class="group">
+      <%= f.input :new_tag %>
+    </div>
+    <div class="group">
+      <%= f.input :hot_product_tag %>
+    </div>
     <div class="group">
       <%= f.input :description %>
     </div>

@@ -225,155 +225,6 @@
   </div>
 </div>
 
- <!-- Hot product 的产品部分 -->
-<!-- <div class="hotproductbg">
-
-  <div class="nocontent"> </div>
-  <div class="row container">
-    <div class="welcome-content-title">
-      Hot Products
-    </div>
-
-        <div class="col-xs-6 col-md-4">
-            <div class="product-item">
-              <div class="pi-img-wrapper">
-                <img src="/images/iwatch2-02.png" class="img-responsive" alt="Berry Lace Dress">
-                <div>
-                  <a href="#" class="btn">View</a>
-                </div>
-              </div>
-              <h3><a href="shop-item.html">Apple iWatch 2.0</a></h3>
-              <div class="pi-price">$500.00</div>
-              <a href="javascript:;" class="btn add2cart">Add to cart</a>
-              <div class="sticker sticker-new"></div>
-            </div>
-        </div>
-
-
-
-        <div class="col-md-4">
-            <div class="product-item">
-              <div class="pi-img-wrapper">
-                <img src="/images/fitbit-charge2-center-02.png" class="img-responsive" alt="Berry Lace Dress">
-                <div>
-                  <a href="#" class="btn">View</a>
-                </div>
-              </div>
-              <h3><a href="shop-item.html">Fitbit WristBand</a></h3>
-              <div class="pi-price">$200.00</div>
-              <a href="javascript:;" class="btn add2cart">Add to cart</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="product-item">
-              <div class="pi-img-wrapper">
-                <img src="/images/Google-glass2-center-02.png" class="img-responsive" alt="Berry Lace Dress">
-                <div>
-                  <a href="#" class="btn">View</a>
-                </div>
-              </div>
-              <h3><a href="shop-item.html">Google Glass 2.0</a></h3>
-              <div class="pi-price">$300.00</div>
-              <a href="javascript:;" class="btn add2cart">Add to cart</a>
-            </div>
-        </div>
-  </div>
-
-  <div class="row container">
-        <div class="col-xs-6 col-md-4">
-            <div class="product-item">
-              <div class="pi-img-wrapper">
-                <img src="/images/arrowwatch01.png" class="img-responsive" alt="Berry Lace Dress">
-                <div>
-                  <a href="#" class="btn">View</a>
-                </div>
-              </div>
-              <h3><a href="shop-item.html">Arrow Smartwatch</a></h3>
-              <div class="pi-price">$377.00</div>
-              <a href="javascript:;" class="btn add2cart">Add to cart</a>
-              <div class="sticker sticker-new"></div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="product-item">
-              <div class="pi-img-wrapper">
-                <img src="/images/samsung-gear-2-01.png" class="img-responsive" alt="Berry Lace Dress">
-                <div>
-                  <a href="#" class="btn">View</a>
-                </div>
-              </div>
-              <h3><a href="shop-item.html">Samsung gear 2</a></h3>
-              <div class="pi-price">$170.00</div>
-              <a href="javascript:;" class="btn add2cart">Add to cart</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="product-item">
-              <div class="pi-img-wrapper">
-                <img src="/images/microsoft-band-01.png" class="img-responsive" alt="Berry Lace Dress">
-                <div>
-                  <a href="#" class="btn">View</a>
-                </div>
-              </div>
-              <h3><a href="shop-item.html">Microsoft Band</a></h3>
-              <div class="pi-price">$130.00</div>
-              <a href="javascript:;" class="btn add2cart">Add to cart</a>
-            </div>
-        </div>
-  </div>
-
-  <div class="row container">
-        <div class="col-xs-6 col-md-4">
-            <div class="product-item">
-              <div class="pi-img-wrapper">
-                <img src="/images/lglifebandtouch-01.png" class="img-responsive" alt="Berry Lace Dress">
-                <div>
-                  <a href="#" class="btn">View</a>
-                </div>
-              </div>
-              <h3><a href="shop-item.html">LG Lifeband Touch</a></h3>
-              <div class="pi-price">$277.00</div>
-              <a href="javascript:;" class="btn add2cart">Add to cart</a>
-              <div class="sticker sticker-new"></div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="product-item">
-              <div class="pi-img-wrapper">
-                <img src="/images/movea-g-series-01.png" class="img-responsive" alt="Berry Lace Dress">
-                <div>
-                  <a href="#" class="btn">View</a>
-                </div>
-              </div>
-              <h3><a href="shop-item.html">Movea G Series</a></h3>
-              <div class="pi-price">$170.00</div>
-              <a href="javascript:;" class="btn add2cart">Add to cart</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="product-item">
-              <div class="pi-img-wrapper">
-                <img src="/images/SONY-Project-Morpheus-01.png" class="img-responsive" alt="Berry Lace Dress">
-                <div>
-                  <a href="#" class="btn">View</a>
-                </div>
-              </div>
-              <h3><a href="shop-item.html">SONY Project Morpheus</a></h3>
-              <div class="pi-price">$130.00</div>
-              <a href="javascript:;" class="btn add2cart">Add to cart</a>
-            </div>
-        </div>
-  </div>
-
-
-  <br>
-
-</div> -->
-
-
-
 
 <div class="productbg">
   <div class="nocontent"> </div>
@@ -382,7 +233,7 @@
     Hot Products
   </div>
   <% @products.each do |product| %>
-
+    <% if product.hot_product_tag == true %>
     <div class="col-xs-6 col-md-4">
       <%= link_to product_path(product) do %>
 
@@ -412,17 +263,70 @@
                 Sold out, you cannot purchase
               <% end %>
               <!-- <a href="javascript:;" class="btn add2cart">Add to cart</a> -->
+          <% if product.new_tag == true %>
           <div class="sticker sticker-new"></div>
+          <% end %>
         </div>
       <% end %>
     </div>
+    <% end %>
   <% end %>
-
-
 
 </div>
 <br>
 <br>
+</div>
+
+
+
+<div class="productbg">
+  <div class="nocontent">
+  </div>
+  <div class="row container">
+    <div class="welcome-content-title">
+      New Products
+    </div>
+      <% @products.each do |product| %>
+        <% if product.new_tag == true %>
+        <div class="col-xs-6 col-md-4">
+          <%= link_to product_path(product) do %>
+
+            <div class="product-item">
+              <div class="pi-img-wrapper">
+                <!-- <img src="/images/iwatch2-02.png" class="img-responsive" alt="Berry Lace Dress"> -->
+                <% if product.image.present? %>
+                  <%= image_tag(product.image.medium.url, class: "img-responsive") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
+                <% end %>
+                <div>
+                    <%= link_to("VIEW", product_path(product), class: "btn")%>
+                </div>
+              </div>
+              <h3><a href="shop-item.html"><%= product.title %> </a></h3>
+              <div class="pi-price">$<%= product.price %></div>
+              <% if product.quantity.present? && product.quantity > 0 %>
+                  <%= link_to("add to cart", add_to_cart_product_path(product), :method => :post, :class => "btn add2cart") %>
+                  <!-- <div class="product-item">
+                      <div>
+                        <%#= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "add-to-cart btn btn-default") %>
+                        <%#= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "btn add2cart ") %>
+                      </div>
+                  </div> -->
+                  <% else %>
+                    Sold out, you cannot purchase
+                  <% end %>
+                  <!-- <a href="javascript:;" class="btn add2cart">Add to cart</a> -->
+              <div class="sticker sticker-new"></div>
+            </div>
+          <% end %>
+        </div>
+        <% end %>
+      <% end %>
+
+  </div>
+  <br>
+  <br>
 </div>
 
 

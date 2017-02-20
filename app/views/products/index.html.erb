@@ -79,7 +79,9 @@
                     Sold out, you cannot purchase
                   <% end %>
                   <!-- <a href="javascript:;" class="btn add2cart">Add to cart</a> -->
-              <div class="sticker sticker-new"></div>
+                  <% if product.new_tag %>
+                  <div class="sticker sticker-new"></div>
+                  <% end %>
             </div>
           <% end %>
         </div>
@@ -130,7 +132,9 @@
                     Sold out, you cannot purchase
                   <% end %>
                   <!-- <a href="javascript:;" class="btn add2cart">Add to cart</a> -->
-              <div class="sticker sticker-new"></div>
+                  <% if product.new_tag %>
+                  <div class="sticker sticker-new"></div>
+                  <% end %>
             </div>
           <% end %>
         </div>
@@ -180,7 +184,9 @@
                     Sold out, you cannot purchase
                   <% end %>
                   <!-- <a href="javascript:;" class="btn add2cart">Add to cart</a> -->
-              <div class="sticker sticker-new"></div>
+                  <% if product.new_tag %>
+                  <div class="sticker sticker-new"></div>
+                  <% end %>
             </div>
           <% end %>
         </div>
@@ -232,7 +238,9 @@
                     Sold out, you cannot purchase
                   <% end %>
                   <!-- <a href="javascript:;" class="btn add2cart">Add to cart</a> -->
-              <div class="sticker sticker-new"></div>
+                  <% if product.new_tag %>
+                  <div class="sticker sticker-new"></div>
+                  <% end %>
             </div>
           <% end %>
         </div>
@@ -284,7 +292,9 @@
                     Sold out, you cannot purchase
                   <% end %>
                   <!-- <a href="javascript:;" class="btn add2cart">Add to cart</a> -->
-              <div class="sticker sticker-new"></div>
+                  <% if product.new_tag == true %>
+                  <div class="sticker sticker-new"></div>
+                  <% end %>
             </div>
           <% end %>
         </div>
