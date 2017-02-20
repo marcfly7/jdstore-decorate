@@ -83,6 +83,11 @@
     z-index: 500;
     padding-bottom: 0px;
 }
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 15px 5px;
+}
 .productcatnav {
     position: relative;
     min-height: 50px;
@@ -109,15 +114,15 @@
         font-weight: 400;
         color: #000;
       }
-      #flipkart2-navbar .navbar-nav>li>a:hover{
-        color: #ff5722;
-        box-shadow: 0px 20px 0px -18px #ff5722;
-      }
-
-      .add{
-        color: #ff5722;
-        box-shadow: 0px 20px 0px -18px #ff5722;
-      }
+#flipkart2-navbar .navbar-nav>li>a:hover{
+  color: #ff5722;
+  //box-shadow: 0px 20px 0px -18px #ff5722;
+}
+//
+// .add{
+//   color: #ff5722;
+//   box-shadow: 0px 20px 0px -18px #ff5722;
+// }
 
 
 #homebanner001 {
@@ -487,7 +492,8 @@ div.container {
 
 
 .welcome-content-title {
-  font-family: Tahoma, verdana, "Proxima Nova Light",Arial,sans-serif;
+  //font-family: Tahoma, verdana, "Proxima Nova Light",Arial,sans-serif;
+  font-family: "Comic Sans MS", 'Roboto', sans-serif;
     width: 100%;
     font-size: 23px;
     font-weight: 500;

@@ -6,4 +6,5 @@ class Product < ApplicationRecord
   mount_uploader :app_image, ImageUploader
 
   has_many :reviews
+  belongs_to :category
 end
