@@ -306,7 +306,7 @@
               <h3><a href="shop-item.html"><%= product.title %> </a></h3>
               <div class="pi-price">$<%= product.price %></div>
               <% if product.quantity.present? && product.quantity > 0 %>
-                  <%= link_to("add to cart", add_to_cart_product_path(product), :method => :post, :class => "btn add2cart") %>
+                  <%= link_to("Add to cart", add_to_cart_product_path(product), :method => :post, :class => "btn add2cart") %>
                   <!-- <div class="product-item">
                       <div>
                         <%#= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "add-to-cart btn btn-default") %>
@@ -328,6 +328,7 @@
   <br>
   <br>
 </div>
+<br>
 
 
 
