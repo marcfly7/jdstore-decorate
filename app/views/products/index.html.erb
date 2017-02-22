@@ -62,10 +62,10 @@
                   <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
                 <% end %>
                 <div>
-                    <%= link_to("VIEW", product_path(product), class: "btn")%>
+                    <%#= link_to("VIEW", product_path(product), class: "btn")%>
                 </div>
               </div>
-              <h3><a href="shop-item.html"><%= product.title %> </a></h3>
+              <h3><%= link_to(product.title, product_path(product)) %></h3>
               <div class="pi-price">$<%= product.price %></div>
               <% if product.quantity.present? && product.quantity > 0 %>
                   <%= link_to("Add to cart", add_to_cart_product_path(product), :method => :post, :class => "btn add2cart") %>
@@ -115,10 +115,10 @@
                   <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
                 <% end %>
                 <div>
-                    <%= link_to("VIEW", product_path(product), class: "btn")%>
+                    <%#= link_to("VIEW", product_path(product), class: "btn")%>
                 </div>
               </div>
-              <h3><a href="shop-item.html"><%= product.title %> </a></h3>
+              <h3><%= link_to(product.title, product_path(product)) %></h3>
               <div class="pi-price">$<%= product.price %></div>
               <% if product.quantity.present? && product.quantity > 0 %>
                   <%= link_to("Add to cart", add_to_cart_product_path(product), :method => :post, :class => "btn add2cart") %>
@@ -167,10 +167,10 @@
                   <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
                 <% end %>
                 <div>
-                    <%= link_to("VIEW", product_path(product), class: "btn")%>
+                    <%#= link_to("VIEW", product_path(product), class: "btn")%>
                 </div>
               </div>
-              <h3><a href="shop-item.html"><%= product.title %> </a></h3>
+              <h3><%= link_to(product.title, product_path(product)) %></h3>
               <div class="pi-price">$<%= product.price %></div>
               <% if product.quantity.present? && product.quantity > 0 %>
                   <%= link_to("Add to cart", add_to_cart_product_path(product), :method => :post, :class => "btn add2cart") %>
@@ -221,10 +221,10 @@
                   <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
                 <% end %>
                 <div>
-                    <%= link_to("VIEW", product_path(product), class: "btn")%>
+                    <%#= link_to("VIEW", product_path(product), class: "btn")%>
                 </div>
               </div>
-              <h3><a href="shop-item.html"><%= product.title %> </a></h3>
+              <h3><%= link_to(product.title, product_path(product)) %></h3>
               <div class="pi-price">$<%= product.price %></div>
               <% if product.quantity.present? && product.quantity > 0 %>
                   <%= link_to("Add to cart", add_to_cart_product_path(product), :method => :post, :class => "btn add2cart") %>
@@ -275,10 +275,10 @@
                   <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
                 <% end %>
                 <div>
-                    <%= link_to("VIEW", product_path(product), class: "btn")%>
+                    <%#= link_to("VIEW", product_path(product), class: "btn")%>
                 </div>
               </div>
-              <h3><a href="shop-item.html"><%= product.title %> </a></h3>
+              <h3><%= link_to(product.title, product_path(product)) %></h3>
               <div class="pi-price">$<%= product.price %></div>
               <% if product.quantity.present? && product.quantity > 0 %>
                   <%= link_to("Add to cart", add_to_cart_product_path(product), :method => :post, :class => "btn add2cart") %>
