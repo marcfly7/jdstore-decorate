@@ -564,7 +564,7 @@ div.container {
     border: 1px #fff solid;
     margin: -13px 5px 0;
     background: transparent;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     position: relative;
     top: 80%;
     line-height: 1.4;
@@ -576,28 +576,41 @@ div.container {
 }
 
 .product-item h3 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     padding-bottom: 4px;
-    text-transform: uppercase;
+    //text-transform: uppercase;
 }
 .product-item h3 a {
-  font-family: verdana, PingFangSC-Medium, Verdana, Geneva, sans-serif;
-    color: #3e4d5c;
+  //font-family: verdana, PingFangSC-Medium, Verdana, Geneva, sans-serif;
+  font-family: "Comic Sans MS", 'Roboto', sans-serif;
+    color: #384245;
 }
 .product-item h3 a:hover {
-    color: #E02222;
+    color: #ff5722;
 }
+
 .pi-price {
-    color: #e84d1c;
+  font-family: "Comic Sans MS", 'Roboto', sans-serif;
+    color: #ff5722;
     font-size: 18px;
     float: left;
     padding-top: 1px;
 }
+
+.pi-thumbs-up {
+    color: #ff5722;
+    font-size: 16px;
+    margin:0 auto;
+    position: relative;
+    float: right;
+    //padding-left: 0px;
+    //padding-left: 0px;
+}
 .product-item .add2cart {
   font-family: verdana, PingFangSC-Medium, Verdana, Geneva, sans-serif;
-    float: right;
-    color: #a8aeb3;
+    float: left;
+    color: #384245;
     border: 1px #ededed solid;
     padding: 3px 6px;
     //text-transform: uppercase;

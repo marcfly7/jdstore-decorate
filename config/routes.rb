@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     collection do
       get :search
     end
+    member do
+      put "like", to: "products#upvote"
+      put "dislike", to: "products#downvote"
+    end
   end
   resources :carts do
     collection do

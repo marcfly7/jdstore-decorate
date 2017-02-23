@@ -7,4 +7,6 @@ class Product < ApplicationRecord
 
   has_many :reviews
   belongs_to :category
+
+  acts_as_votable
 end
