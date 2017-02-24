@@ -254,14 +254,48 @@
                 </div>
               </td>
             <td width="100%">
-              <%= link_to like_product_path(product), method: :put do %>
-              <div class="pi-thumbs-up">
-                <!-- <i class="fa fa-heart fa-3x", style="color:#ff5722;"></i>
-                   <i class="fa fa-heart-o fa-3x", style="color:#ff5722;"></i>-->
-                <i class="fa fa-thumbs-up fa-2x" , style="color:#ff5722;"></i>
-                <%= product.get_upvotes.size %>
-              </div>
+
+              <% if !current_user %>
+                <span><a href="#"  data-toggle="modal" data-target="#login-modal">
+
+                  <div class="pi-thumbs-up" onclick="openModal()" >
+                    <!-- <i class="fa fa-heart fa-3x", style="color:#ff5722;"></i>
+                       <i class="fa fa-heart-o fa-3x", style="color:#ff5722;"></i>-->
+                    <i class="fa fa-thumbs-up fa-2x" , style="color:#ff5722;"></i>
+
+                    <%= product.get_upvotes.size %>
+                  </div>
+
+                </a></span>
+              <% else %>
+                <%= link_to like_product_path(product), method: :put do %>
+                <div class="pi-thumbs-up" onclick="openModal()" >
+                  <!-- <i class="fa fa-heart fa-3x", style="color:#ff5722;"></i>
+                     <i class="fa fa-heart-o fa-3x", style="color:#ff5722;"></i>-->
+                  <i class="fa fa-thumbs-up fa-2x" , style="color:#ff5722;"></i>
+
+                  <%= product.get_upvotes.size %>
+                </div>
+                <% end %>
+                <!-- <script type="text/javascript">
+                $( "#openModal" ).click(function() {
+                   $( "#login-modal" ).modal("show");
+                   setTimeout(function() {
+                      $( "#login-modal" ).close();
+                    }, 20000000);
+                });
+
+                function openModal(){
+
+                  $( "#login-modal" ).modal("show");
+                  setTimeout(function() {
+                     $( "#login-modal" ).modal("show");
+                   }, 20000);
+
+                }
+                </script> -->
               <% end %>
+
             </td>
           </tr>
           <tr>
@@ -330,14 +364,24 @@
                     </div>
                   </td>
                   <td width="100%">
-                  <%= link_to like_product_path(product), method: :put do %>
-                  <div class="pi-thumbs-up">
-                    <!-- <i class="fa fa-heart fa-3x", style="color:#ff5722;"></i>
-                       <i class="fa fa-heart-o fa-3x", style="color:#ff5722;"></i>-->
-                    <i class="fa fa-thumbs-up fa-2x" , style="color:#ff5722;"></i>
-                    <%= product.get_upvotes.size %>
-                  </div>
-                  <% end %>
+                    <% if !current_user %>
+                      <span><a href="#"  data-toggle="modal" data-target="#login-modal">
+                        <div class="pi-thumbs-up" onclick="openModal()" >
+                          <i class="fa fa-thumbs-up fa-2x" , style="color:#ff5722;"></i>
+                          <%= product.get_upvotes.size %>
+                        </div>
+
+                      </a></span>
+                    <% else %>
+                      <%= link_to like_product_path(product), method: :put do %>
+                      <div class="pi-thumbs-up" onclick="openModal()" >
+
+                        <i class="fa fa-thumbs-up fa-2x" , style="color:#ff5722;"></i>
+
+                        <%= product.get_upvotes.size %>
+                      </div>
+                      <% end %>
+                    <% end %>
                 </td>
               </tr>
               <tr>
@@ -404,4 +448,11 @@
       clickEvent = false;
     });
   });
+//
+// if ($('#user_signed_in') == 'true') {
+//   $('#login-modal').modal();
+//
+// }
+
+
 </script>

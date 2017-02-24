@@ -12,40 +12,77 @@
         Product info about "<%= @query_string %>"
       </div>
       <% @products.each do |product| %>
-        <div class="col-xs-6 col-md-4">
-          <%= link_to product_path(product) do %>
+      <div class="col-xs-6 col-md-4">
+        <%= link_to product_path(product) do %>
 
-            <div class="product-item">
-              <div class="pi-img-wrapper">
-                <!-- <img src="/images/iwatch2-02.png" class="img-responsive" alt="Berry Lace Dress"> -->
-                <% if product.image.present? %>
-                  <%= image_tag(product.image.medium.url, class: "img-responsive") %>
-                <% else %>
-                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
-                <% end %>
-                <div>
-                    <%= link_to("VIEW", product_path(product), class: "btn")%>
-                </div>
+          <div class="product-item">
+            <div class="pi-img-wrapper">
+              <!-- <img src="/images/iwatch2-02.png" class="img-responsive" alt="Berry Lace Dress"> -->
+              <% if product.image.present? %>
+                <%= image_tag(product.image.medium.url, class: "img-responsive") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
+              <% end %>
+              <div>
+                  <%#= link_to("VIEW", product_path(product), class: "btn")%>
               </div>
-              <h3><a href="shop-item.html"><%= product.title %> </a></h3>
-              <div class="pi-price">$<%= product.price %></div>
-              <% if product.quantity.present? && product.quantity > 0 %>
-                  <%= link_to("Add to cart", add_to_cart_product_path(product), :method => :post, :class => "btn add2cart") %>
-                  <!-- <div class="product-item">
-                      <div>
-                        <%#= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "add-to-cart btn btn-default") %>
-                        <%#= link_to("add to cart", add_to_cart_product_path(@product), :method => :post, :class => "btn add2cart ") %>
-                      </div>
-                  </div> -->
-                  <% else %>
-                    Sold out, you cannot purchase
-                  <% end %>
-                  <!-- <a href="javascript:;" class="btn add2cart">Add to cart</a> -->
-              <div class="sticker sticker-new"></div>
             </div>
-          <% end %>
-        </div>
+            <hr>
 
+            <table>
+              <tr>
+                <td width="100%">
+                  <div >
+                    <h3><%= link_to(product.title, product_path(product))%></h3>
+                  </div>
+                </td>
+                <td width="100%">
+                  <% if !current_user %>
+                    <span><a href="#"  data-toggle="modal" data-target="#login-modal">
+                      <div class="pi-thumbs-up" onclick="openModal()" >
+                        <i class="fa fa-thumbs-up fa-2x" , style="color:#ff5722;"></i>
+                        <%= product.get_upvotes.size %>
+                      </div>
+
+                    </a></span>
+                  <% else %>
+                    <%= link_to like_product_path(product), method: :put do %>
+                    <div class="pi-thumbs-up" onclick="openModal()" >
+
+                      <i class="fa fa-thumbs-up fa-2x" , style="color:#ff5722;"></i>
+
+                      <%= product.get_upvotes.size %>
+                    </div>
+                    <% end %>
+                  <% end %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="product-title">
+                  <div class="pi-price">$<%= product.price %>
+                    &nbsp;&nbsp;&nbsp;</div>
+                </div>
+              </td>
+              <td>
+                <% if product.quantity.present? && product.quantity > 0 %>
+                  <%= link_to(add_to_cart_product_path(product), :method => :post, :class => "btn add2cart") do %>
+                  <svg class="cart-svg " width="13" height="13" viewBox="0 0 16 16 ">
+                      <path d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86 " fill="#384245 "></path>
+                  </svg>Add to cart
+                  <% end %>
+                <% else %>
+                Sold out, you cannot purchase
+                <% end %>
+              </td>
+            </tr>
+            </table>
+                <% if product.new_tag == true %>
+                <div class="sticker sticker-new"></div>
+                <% end %>
+          </div>
+        <% end %>
+      </div>
       <% end %>
 
      <% end %>

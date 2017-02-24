@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
-
+  # before_action :authenticate_user!, only: [:upvote, :downvote]
   def home
     @products = Product.all
   end
