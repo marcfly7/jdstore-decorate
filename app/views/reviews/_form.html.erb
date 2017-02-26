@@ -4,7 +4,22 @@
       <%= f.text_area :body, class: "form-control" %>
   </div>
  <br>
-  <div class="reviews-form">
-    <%= f.submit "Add a Review", class: "btn btn-primary pull-right" %>
-  </div>
+   <% if !current_user %>
+     <div class="checkout clearfix pull-right">
+       <div class="round-submit-1 reviews-form">
+         <div>
+             <a class="round-submit-button" data-toggle="modal" data-target="#login-modal">
+               Add a Review</a>
+         </div>
+       </div>
+
+     </a></span>
+    </div>
+   <% else %>
+
+   <div class="round-submit-1 reviews-form">
+     <%= f.submit "Add a Review", class: "reviews-form round-submit-button pull-right" %>
+   </div>
+   <% end %>
+
 <% end %>

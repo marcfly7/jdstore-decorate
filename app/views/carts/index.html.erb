@@ -63,8 +63,22 @@
 
     <hr>
 
-    <div class="checkout clearfix">
-      <%= link_to("确认结账", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
+    <% if !current_user %>
+      <div class="checkout clearfix pull-right">
+        <div class="round-submit-1">
+          <div>
+              <a class="round-submit-button" data-toggle="modal" data-target="#login-modal">
+                确认结账</a>
+          </div>
+        </div>
+
+      </a></span>
+     </div>
+    <% else %>
+
+    <div class="round-submit-1">
+      <%= link_to("确认结账", checkout_carts_path, method: :post, class: "round-submit-button pull-right") %>
     </div>
+    <% end %>
   </div>
 </div>
