@@ -45,6 +45,8 @@ gem 'seo_helper'
 
 gem 'acts_as_votable', '~> 0.10.0'
 
+gem 'aasm'
+
 gem 'letter_opener', group: :development
 
 group :production do
