@@ -12,12 +12,17 @@
     <div class="container-fluid">
       <div class="row">
         <%= render "common/navbar" %>
-          <p class="text-center">
+        <div class="row container">
+          <ul class="nav nav-pills nav-stacked" style="max-width: 100px;">
             <li> <%= link_to("Products", admin_products_path) %> </li>
             <li> <%= link_to("Orders", admin_orders_path) %> </li>
-          </p>
+          </ul>
+
+        </div>
       </div>
+      <div class="row container">
           <%= yield %>
+      </div>
       </div>
     </div>
     <div class="row">

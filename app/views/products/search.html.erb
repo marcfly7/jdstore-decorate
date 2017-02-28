@@ -3,7 +3,11 @@
   <div class="nocontent">
   </div>
   <div class="row container">
-    <% if @products.blank? %>
+    <% if @query_string.blank? %>
+    <div class="welcome-content-title">
+      Sorry, The search content cannot be blank, please type some product into to search.
+    </div>
+    <% elsif @products.blank? %>
       <div class="welcome-content-title">
         Sorry, we don't have product you would like to search
       </div>
@@ -88,9 +92,11 @@
      <% end %>
 
   </div>
+  <% if @products.present? %>
   <div class="text-center">
     <%= will_paginate(@products, renderer: BootstrapPagination::Rails) %>
   </div>
+  <% end %>
   <br>
   <br>
 </div>
