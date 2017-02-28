@@ -433,7 +433,7 @@ div.container {
 }
 
 .round-submit-1 .round-submit-button {
-  border-radius: 20px;
+  border-radius: 10px;
   background: transparent;
   display: inline-block;
   border: 2px solid #FF5722;
@@ -443,7 +443,7 @@ div.container {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 14px 37px 13px;
+  padding: 14px 20px 13px;
   margin-right: 10px;
   margin-top: 20px;
 }
@@ -1021,5 +1021,125 @@ div.container {
 	background: #ff5722;
 }
 
+// car item 界面
 
+.cart-item-01 {
+  font-family: "Comic Sans MS", verdana, PingFangSC-Medium, Geneva, sans-serif;
+}
+.panel-info {
+    border-color: #f1f1f1;
+}
+
+.panel-heading-cart {
+    color: #ff5722;
+    background-color: #fff;
+    border-color: #f1f1f1;
+    font-size: 20px;
+}
+.panel-info > .panel-heading {
+    color: #384245;
+    background-color: #fff;
+    border-color: #f1f1f1;
+}
+.panel-heading-cart {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.product-name-cart a {
+  color: #384245;
+  font-size: 14px;
+}
+.empty-cart-item {
+  color: #384245;
+  font-size: 16px;
+}
+
+.cart-delete-item {
+  color: #F44336;
+  font-size: 25px;
+}
+
+.panel-footer {
+    padding: 5px 15px;
+    background-color: #fff;
+    border-top: 0px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.panel-title-cart {
+  //padding-left: -15px;
+}
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+    font-weight: bold;
+}
+
+.round-submit-cart .round-submit-button-cart {
+    border-radius: 7px;
+    background: transparent;
+    display: inline-block;
+    border: 2px solid #FF5722;
+    color: #FF5722;
+    line-height: 0.6;
+    text-align: center;
+    font-size: 16px;
+    //text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 13px 17px;
+    margin: 10px 10px 20px;
+}
+
+.round-submit-cart-pay .round-submit-button-cart-pay {
+    border-radius: 7px;
+    background-color: #FF5722;
+    display: inline-block;
+    border: 2px solid #FF5722;
+    color: #fff;
+    line-height: 0.6;
+    text-align: center;
+    font-size: 16px;
+    //text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 13px 17px;
+    margin: 10px 10px 20px;
+}
+.round-cancel-cart .round-cancel-button-cart {
+    border-radius: 7px;
+    background-color: #FF5722;
+    display: inline-block;
+    border: 2px solid #FF5722;
+    color: #000;
+    line-height: 0.6;
+    text-align: center;
+    font-size: 16px;
+    //text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 13px 17px;
+    margin: 10px 10px 20px;
+}
+.total-price-item {
+  color: #FF5722;
+  font-size: 16px;
+  margin: 10px;
+}
+.total-size {
+  font-size: 16px;
+}
+.update-item .btn-primary {
+  font-size: 13px;
+  background-color: #ff5722;
+  border: 0px;
+}
 // END TAB ~~~~~~~~~~~~~~~ (.)(.)
