@@ -1031,7 +1031,7 @@ div.container {
 }
 
 .panel-heading-cart {
-    color: #ff5722;
+    color: #384245;
     background-color: #fff;
     border-color: #f1f1f1;
     font-size: 20px;
@@ -1188,6 +1188,45 @@ div.container {
 .cart-delete-item-dropdown {
   color: #F44336;
   font-size: 17px;
+}
+
+.count-input .incr-btn {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    color: #606060;
+    font-weight: 300;
+    text-align: center;
+    line-height: 24px;
+    text-decoration: none;
+    top: 0;
+    right: 0;
+}
+.count-input .incr-btn:first-child {
+    right: auto;
+    left: 0;
+}
+
+.count-input input {
+    width: 100%;
+    height: 25px;
+    border: 2px solid #ededed;
+    border-radius: 4px;
+    background: none;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+
+.count-input {
+    position: relative;
+    width: 100px;
+    margin: 10px 0;
 }
 //
 // .dropdown-menu .cart-item .item-thumb > img {

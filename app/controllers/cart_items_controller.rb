@@ -22,6 +22,30 @@ class CartItemsController < ApplicationController
 
     redirect_to carts_path
   end
+
+  def add_quantity
+    @cart_item = current_cart.cart_items.find_by_product_id(params[:id])
+    if @cart_item.quantity < @cart_item.product.quantity
+       @cart_item.quantity += 1
+       @cart_item.save
+       redirect_to carts_path
+    elsif @cart_item.quantity == @cart_item.product.quantity
+       redirect_to carts_path, alert: "There is no enough products"
+    end
+  end
+
+  def remove_quantity
+    @cart_item = current_cart.cart_items.find_by_product_id(params[:id])
+    if @cart_item.quantity > 0
+       @cart_item.quantity -= 1
+       @cart_item.save
+       redirect_to carts_path
+    elsif @cart_item.quantity == 0
+       redirect_to carts_path, alert: "You have 0 product in your cart that cannot remove"
+    end
+  end
+
+
   def cart_item_params
     params.require(:cart_item).permit(:quantity)
   end
