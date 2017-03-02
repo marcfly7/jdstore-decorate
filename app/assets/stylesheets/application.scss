@@ -56,13 +56,45 @@ font-family: "Comic Sans MS", cursive, sans-serif !important;
 //     font-family: verdana, PingFangSC-Medium, Geneva, sans-serif;
 // }
 
-.bannerbg
-{
+
+
+
+//
+// .bannerbg
+// {
+//   background: #384245;
+//   margin-top: -20px;
+//   margin-bottom: 0px;
+//   z-index: 501;
+// }
+//
+// .header-scroll {
+//   //position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     color:#fff;
+//     z-index: 50;
+//     height: 150px;
+//
+// }
+
+
+//拉下时固定导航栏效果
+.header_fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 10px;
+  z-index: 100;
   background: #384245;
-  margin-top: -20px;
-  margin-bottom: 0px;
-  z-index: 501;
+  box-shadow: rgba(0,0,0,.1) 0 1px 5px;
+  border-bottom: 3px solid #ff5722;
+
 }
+
 
 #flipkart-navbar {
     background-color: #384245;//#263238
@@ -146,7 +178,7 @@ font-family: "Comic Sans MS", cursive, sans-serif !important;
 
 .row2 {
     padding-bottom: 20px;
-    padding-top: 5px;
+    padding-top: 25px;
 }
 
 .flipkart-navbar-input {
