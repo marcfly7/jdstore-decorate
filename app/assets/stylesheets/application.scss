@@ -1260,7 +1260,32 @@ div.container {
     width: 100px;
     margin: 10px 0;
 }
-//
-// .dropdown-menu .cart-item .item-thumb > img {
-//   width: 100%;
-// }
+
+//about us
+
+@media (min-width: 768px) {
+//>=768的设备
+
+    .brand-pills > li > a {
+      border-top-right-radius: 0px;
+    	border-bottom-right-radius: 0px;
+
+    }
+
+    li.brand-nav.a:after{
+    	content: " ";
+    	display: block;
+    	width: 0;
+    	height: 0;
+    	border-top: 20px solid transparent;
+    	border-bottom: 20px solid transparent;
+    	border-left: 9px solid #428bca;
+    	position: absolute;
+    	top: 50%;
+    	margin-top: -20px;
+    	left: 100%;
+    	z-index: 2;
+
+
+    }
+}

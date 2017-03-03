@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'products#home'
+  root 'welcome#index'
   namespace :admin do
     resources :products
     resources :orders do
@@ -52,5 +52,6 @@ Rails.application.routes.draw do
     resources :orders
   end
   resources :welcome
+  get 'about' => 'welcome#about'
 
 end
