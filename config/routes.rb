@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     member do
       put "like", to: "products#upvote"
     end
+
   end
   resources :carts do
     collection do
@@ -53,5 +54,6 @@ Rails.application.routes.draw do
   end
   resources :welcome
   get 'about' => 'welcome#about'
+  get 'home' => 'products#home'
 
 end
