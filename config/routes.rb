@@ -53,7 +53,7 @@ Rails.application.routes.draw do
     resources :orders
   end
   resources :welcome
-  get 'about' => 'welcome#about'
+  get 'about' => 'products#about'
   get 'home' => 'products#home'
 
 end
