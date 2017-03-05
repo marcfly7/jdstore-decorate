@@ -1,29 +1,17 @@
 <nav class="navbar navbar-default" role="navigation">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
 <div id="flipkart-navbar">
     <div class="container">
         <div class="row row1">
             <ul class="largenav pull-right">
                 <li class="upper-links"><%= link_to("Home", "/home", class: 'links') %></li>
                 <li class="upper-links"><%= link_to("Products", products_path, class: 'links') %>
-                  <!-- <li class="upper-links dropdown"><%= link_to("Products", products_path, class: 'links') %> -->
 
-                <!-- <ul class="dropdown-menu">
-                  <%# Category.all.each do |category| %>
-                  <li class="profile-li">
-                    <%#= link_to(category.name, products_path(category: category.name), class: "profile-links")%>
-                  </li>
-                  <%# end %>
-                </ul> -->
                 </li>
-                <!-- <li class="upper-links"><%= link_to("Accessory", "/", class: 'links') %></li> -->
 
                 <% if !current_user %>
                   <li class="upper-links"><a href="#" class="links" data-toggle="modal" data-target="#signup-modal">Sign up</a></li>
                   <li class="upper-links"><a href="#" class="links" data-toggle="modal" data-target="#login-modal">Log in</a></li>
-                  <!-- <li class="upper-links"><%#= link_to("Sign up", new_user_registration_path, class: "links") %></li>
 
-                  <li class="upper-links"><%#= link_to('Log in', new_user_session_path, class: "links")  %></li> -->
                 <% else %>
                   <li class="upper-links dropdown">
                     <a href="#" class="links" >
@@ -45,8 +33,6 @@
                          <%= link_to("Order List", account_orders_path, class: "profile-links") %>
                       </li>
                       <li class="profile-li">
-                        <%#= link_to(content_tag(:i, 'Log out', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete, class: "links") %>
-                        <!-- 加上图标字体变掉了，所以改成下面 -->
                         <%= link_to("Log out", destroy_user_session_path, method: :delete, class: "profile-links") %>
                       </li>
                     </ul>

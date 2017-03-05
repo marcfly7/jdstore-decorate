@@ -44,12 +44,10 @@ $(window).scroll(function () {
     if ($('.row2').is(':animated')) {
       return false
     }
-    $('.row2').addClass('header_fixed') // 让导航栏固定在顶部
+    $('.row2').addClass('row2_fixed') // 让导航栏固定在顶部
     $('.row2').stop().animate({top: 0}, 600) // 在600ms内，慢慢地出来
-    $('.header_placeholder').show() // 显示「用来占位」的header
   } else {
     $('.row2').css({top: -80})
-    $('.row2').removeClass('header_fixed')
-    $('.header_placeholder').hide()
+    $('.row2').removeClass('row2_fixed')
   }
 })

@@ -81,7 +81,7 @@ font-family: "Comic Sans MS", cursive, sans-serif !important;
 
 
 //拉下时固定导航栏效果
-.header_fixed {
+.row2_fixed {
   width: 100%;
   position: fixed;
   top: 0;
@@ -432,7 +432,7 @@ body {
 div.container {
   margin-left:auto;
   margin-right:auto;
-  width:1024px;
+  max-width:1024px;
 }
 
 //首页slide
