@@ -49,7 +49,7 @@ gem 'aasm'
 
 gem 'intercom-rails'
 
-gem 'letter_opener'
+gem 'letter_opener', group: :development
 
 group :production do
   gem "pg"
